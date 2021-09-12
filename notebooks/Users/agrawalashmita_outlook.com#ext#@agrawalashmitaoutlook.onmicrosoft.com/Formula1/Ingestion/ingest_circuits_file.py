@@ -64,3 +64,21 @@ circuit_select_df = circuit_df.select(circuit_df.circuitId,circuit_df.circuitRef
 # COMMAND ----------
 
 display(circuit_select_df)
+
+# COMMAND ----------
+
+circuit_renamed_df = circuit_select_df.withColumnRenamed("circuitId","circuit_id")\
+.withColumnRenamed("circuitRef","circuit_Ref")\
+.withColumnRenamed("name","Name")\
+.withColumnRenamed("location","Location")\
+.withColumnRenamed("country","Country")\
+.withColumnRenamed("lat","Latitude")\
+.withColumnRenamed("lng","Longitude")\
+.withColumnRenamed("alt","altitude")
+
+# COMMAND ----------
+
+display(circuit_renamed_df)
+
+# COMMAND ----------
+
